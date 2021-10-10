@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Pictures_of_Cats.ViewModels;
+using Xamarin.Forms.Xaml;
 
 namespace Pictures_of_Cats
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]  
     public partial class MainPage : ContentPage
     {
         public MainPage()
