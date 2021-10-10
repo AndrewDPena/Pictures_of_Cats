@@ -7,25 +7,26 @@ namespace Pictures_of_Cats.ViewModels
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
-        public Action DisplayInvalidLoginPrompt;   
+        public Action DisplayInvalidLoginPrompt;
+        public Action DisplaySuccessfulLogin;
         public event PropertyChangedEventHandler PropertyChanged = delegate { };  
-        private string email;  
+        private string _email;  
         public string Email
         {  
-            get { return email; }  
+            get => _email;
             set  
             {  
-                email = value;  
+                _email = value;  
                 PropertyChanged(this, new PropertyChangedEventArgs("Email"));  
             }  
         }  
-        private string password;    
+        private string _password;    
         public string Password
         {  
-            get { return password; }  
+            get => _password;
             set  
             {  
-                password= value;  
+                _password= value;  
                 PropertyChanged(this, new PropertyChangedEventArgs("Password"));  
             }  
         }  
@@ -34,12 +35,17 @@ namespace Pictures_of_Cats.ViewModels
         {  
             SubmitCommand = new Command(OnSubmit);  
         }  
-        public void OnSubmit()  
+        private void OnSubmit()  
         {  
-            if (email != "andrewdpena@gmail.com" || password != "MalPaws")  
+            if (_email != "andrewdpena@gmail.com" || _password != "MalPaws")  
             {  
                 DisplayInvalidLoginPrompt();  
-            }  
+            }
+            else
+            {
+                Application.Current.MainPage = new GalleryPage();
+                //DisplaySuccessfulLogin();
+            }
         } 
     }
 }

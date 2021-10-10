@@ -12,7 +12,7 @@ namespace Pictures_of_Cats
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
