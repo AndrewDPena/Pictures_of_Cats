@@ -5,9 +5,17 @@
              x:Class="Pictures_of_Cats.GalleryPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Hello, world!"
+            <!--Label Text="Hello, world!"
                    VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
+                   HorizontalOptions="CenterAndExpand" /-->
+            <ListView x:Name="ListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell x:Name="imageCell" Text="{Binding Name}" ImageSource="{ Binding PicFilepath}" Detail="{Binding Bio}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
