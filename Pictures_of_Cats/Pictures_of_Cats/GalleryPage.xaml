@@ -11,7 +11,7 @@
             <ListView x:Name="ListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell x:Name="imageCell" Text="{Binding Name}" ImageSource="{ Binding PicFilepath}" Detail="{Binding Bio}">
+                        <ImageCell x:Name="imageCell" Text="{Binding Name}" ImageSource="{Binding PicFilepath}" Detail="{Binding Bio}">
                         </ImageCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

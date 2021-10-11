@@ -15,5 +15,29 @@
 
     <ItemGroup>
       <Folder Include="CatPics\Mal" />
+      <Folder Include="CatPics\Mister" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="CatPics\Mal\0.jpg" />
+      <EmbeddedResource Include="CatPics\Mal\0.jpg" />
+      <None Remove="CatPics\Mal\1.jpg" />
+      <EmbeddedResource Include="CatPics\Mal\1.jpg" />
+      <None Remove="CatPics\Mal\2.jpg" />
+      <EmbeddedResource Include="CatPics\Mal\2.jpg" />
+      <None Remove="CatPics\Mal\3.jpg" />
+      <EmbeddedResource Include="CatPics\Mal\3.jpg" />
+      <None Remove="CatPics\Mal\4.jpg" />
+      <EmbeddedResource Include="CatPics\Mal\4.jpg" />
+      <None Remove="CatPics\Mister\0.jpg" />
+      <EmbeddedResource Include="CatPics\Mister\0.jpg" />
+      <None Remove="CatPics\Mister\1.jpg" />
+      <EmbeddedResource Include="CatPics\Mister\1.jpg" />
+      <None Remove="CatPics\Mister\2.jpg" />
+      <EmbeddedResource Include="CatPics\Mister\2.jpg" />
+      <None Remove="CatPics\Mister\3.jpg" />
+      <EmbeddedResource Include="CatPics\Mister\3.jpg" />
+      <None Remove="CatPics\Mister\4.jpg" />
+      <EmbeddedResource Include="CatPics\Mister\4.jpg" />
     </ItemGroup>
 </Project>
