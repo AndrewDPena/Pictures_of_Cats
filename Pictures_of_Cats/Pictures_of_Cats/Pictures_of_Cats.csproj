@@ -10,12 +10,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="CatPics\Mal" />
-      <Folder Include="CatPics\Mister" />
     </ItemGroup>
 
     <ItemGroup>
@@ -39,5 +35,17 @@
       <EmbeddedResource Include="CatPics\Mister\3.jpg" />
       <None Remove="CatPics\Mister\4.jpg" />
       <EmbeddedResource Include="CatPics\Mister\4.jpg" />
+      <None Remove="CatPics\Mal\info.json" />
+      <EmbeddedResource Include="CatPics\Mal\info.json" />
+      <None Remove="CatPics\Mister\info.json" />
+      <EmbeddedResource Include="CatPics\Mister\info.json" />
+      <None Remove="CatPics\Soji\0.jpg" />
+      <EmbeddedResource Include="CatPics\Soji\0.jpg" />
+      <None Remove="CatPics\Soji\1.jpg" />
+      <EmbeddedResource Include="CatPics\Soji\1.jpg" />
+      <None Remove="CatPics\Soji\2.png" />
+      <EmbeddedResource Include="CatPics\Soji\2.png" />
+      <None Remove="CatPics\Soji\info.json" />
+      <EmbeddedResource Include="CatPics\Soji\info.json" />
     </ItemGroup>
 </Project>

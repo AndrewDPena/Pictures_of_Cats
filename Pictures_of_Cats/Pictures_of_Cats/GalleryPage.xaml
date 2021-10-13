@@ -8,7 +8,7 @@
             <!--Label Text="Hello, world!"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand" /-->
-            <ListView x:Name="ListView">
+            <ListView x:Name="ListView" ItemsSource="{Binding CatList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell x:Name="imageCell" Text="{Binding Name}" ImageSource="{Binding PicFilepath}" Detail="{Binding Bio}">

@@ -1,19 +1,49 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace Pictures_of_Cats.ViewModels
 {
     public class GalleryViewModel
     {
-        private readonly List<CatModel> _catList = new List<CatModel>();
-        public List<CatModel> LoadCatData()
+        private const string CatDirectory = "Pictures_of_Cats.CatPics.";
+        private readonly List<CatModel> _catList;
+        public List<CatModel> CatList => _catList;
+
+        public GalleryViewModel()
+        {
+            _catList = new List<CatModel>();
+            LoadCatData();
+        }
+        private void LoadCatData()
         {
             _catList.Clear();
-            
-            _catList.Add(new CatModel {PicFilepath=ImageSource.FromResource("Pictures_of_Cats.CatPics.Mal.0.jpg"), Name="Mal", Bio="A Chonky Boy"});
-            _catList.Add(new CatModel {PicFilepath=ImageSource.FromResource("Pictures_of_Cats.CatPics.Mister.0.jpg"), Name="Mister", Bio="Laid Back and Too Cool for this World"});
+            var resources = GetType().Assembly.GetManifestResourceNames();
+            var infoFiles = from resource in resources where resource.EndsWith(".json") select resource;
+            foreach (var file in infoFiles)
+            {
+                var stream = GetType().Assembly.GetManifestResourceStream(file);
+                var info = new Details();
+                if (stream != null)
+                    using (var reader = new StreamReader(stream))
+                    {
+                        info = JsonConvert.DeserializeObject<Details>(reader.ReadToEnd());
+                    }
+                if (info != null)
+                    _catList.Add(new CatModel
+                    {
+                        PicFilepath = ImageSource.FromResource(CatDirectory + info.Name + ".0.jpg"), Name = info.Name, Bio = info.Bio
+                    });
+            }
+        }
 
-            return _catList;
+        public class Details
+        {
+            public string Name { get; set; }
+            public string Bio { get; set; }
         }
     }
 }
