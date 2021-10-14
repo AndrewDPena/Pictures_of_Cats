@@ -48,4 +48,8 @@
       <None Remove="CatPics\Soji\info.json" />
       <EmbeddedResource Include="CatPics\Soji\info.json" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets" />
+    </ItemGroup>
 </Project>
