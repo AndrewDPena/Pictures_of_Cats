@@ -2,16 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Pictures_of_Cats"
-             xmlns:vm="clr-namespace:Pictures_of_Cats.ViewModels;assembly=Pictures_of_Cats"
              x:Class="Pictures_of_Cats.LoginPage">
     <StackLayout>
-        <!-- ContentPage.BindingContext>
-            <vm:LoginViewModel/>
-        </-->
-        <!-- Place new controls here -->
-        <!--Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" /-->
         <Frame BackgroundColor="#BF043055" HasShadow="False">  
             <StackLayout Orientation="Vertical" Spacing="10">  
                 <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   

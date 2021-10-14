@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Pictures_of_Cats.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,8 +11,17 @@ namespace Pictures_of_Cats
         public GalleryPage()
         {
             var vm = new GalleryViewModel();  
-            this.BindingContext = vm;  
+            BindingContext = vm;  
             InitializeComponent();
+            
+            ListView.ItemSelected += (e, s) =>
+            {
+                if (s.SelectedItem is CatModel cat)
+                {
+                    vm.CreateDetailPage(cat);
+                }
+            };
         }
+        
     }
 }

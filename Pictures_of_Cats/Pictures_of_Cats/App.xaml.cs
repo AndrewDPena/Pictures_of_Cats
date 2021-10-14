@@ -14,7 +14,7 @@ namespace Pictures_of_Cats
             
             NavigationService.Configure("LoginPage", typeof(LoginPage));
             NavigationService.Configure("GalleryPage", typeof(GalleryPage));
-            //NavigationService.Configure("DetailPage", typeof(DetailPage));
+            NavigationService.Configure("DetailPage", typeof(DetailPage));
             var mainPage = ((ViewNavigationService) NavigationService).SetRootPage("LoginPage");
 
             MainPage = mainPage;

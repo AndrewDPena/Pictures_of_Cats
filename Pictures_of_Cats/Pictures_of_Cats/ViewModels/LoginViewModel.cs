@@ -34,7 +34,6 @@ namespace Pictures_of_Cats.ViewModels
             else
             {
                 await App.NavigationService.NavigateAsync("GalleryPage");
-                //Application.Current.MainPage = new GalleryPage();
             }
         } 
     }

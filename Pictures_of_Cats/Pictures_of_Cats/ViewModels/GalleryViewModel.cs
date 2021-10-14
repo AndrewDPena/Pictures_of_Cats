@@ -40,6 +40,11 @@ namespace Pictures_of_Cats.ViewModels
             }
         }
 
+        public async void CreateDetailPage(CatModel cat)
+        {
+            await App.NavigationService.NavigateAsync("DetailPage");
+        }
+
         public class Details
         {
             public string Name { get; set; }
