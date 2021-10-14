@@ -8,7 +8,7 @@ namespace Pictures_of_Cats.ViewModels
     public class DetailViewModel : ViewModelBase
     {
         private CatModel _cat;
-        private List<CatPic> _catPics;
+        private IEnumerable<CatPic> _catPics;
         public CatModel Cat
         {
             get => _cat;
@@ -19,7 +19,7 @@ namespace Pictures_of_Cats.ViewModels
             }
         }
 
-        public List<CatPic> CatPics
+        public IEnumerable<CatPic> CatPics
         {
             get => _catPics;
             set => SetProperty(ref _catPics, value);
@@ -32,8 +32,8 @@ namespace Pictures_of_Cats.ViewModels
         private void CreateCatImageList()
         {
             var resources = GetType().Assembly.GetManifestResourceNames();
-            CatPics = (from resource in resources where resource.Contains(Cat.Name) && 
-                                                        !resource.EndsWith(".json") select new CatPic{Image = ImageSource.FromResource(resource)}).ToList();
+            CatPics = from resource in resources where resource.Contains(Cat.Name) && 
+                                                        !resource.EndsWith(".json") select new CatPic{Image = ImageSource.FromResource(resource)};
         }
     }
 }
