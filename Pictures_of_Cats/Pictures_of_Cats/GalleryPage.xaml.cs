@@ -20,6 +20,7 @@ namespace Pictures_of_Cats
                 {
                     vm.CreateDetailPage(cat);
                 }
+                ((ListView)e).SelectedItem = null; ; 
             };
         }
         

@@ -5,9 +5,6 @@
              x:Class="Pictures_of_Cats.GalleryPage">
     <ContentPage.Content>
         <StackLayout>
-            <!--Label Text="Hello, world!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" /-->
             <ListView x:Name="ListView" ItemsSource="{Binding CatList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
