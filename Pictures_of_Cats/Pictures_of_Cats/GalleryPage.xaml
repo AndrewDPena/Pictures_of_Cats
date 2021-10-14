@@ -2,7 +2,9 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pictures_of_Cats.GalleryPage">
+             x:Class="Pictures_of_Cats.GalleryPage"
+             Title="Gallery">
+    
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="ListView" ItemsSource="{Binding CatList}">
