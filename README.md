@@ -14,7 +14,7 @@ Currently, only one valid login exists.
 
 After logging in, you will be shown a list of available cats, with a short description of each. Selecting a cat will send you to a page containing more pictures of that cat. There you can simply view the cats for as long as you like.
 
-[Example of App Navigation](Pictures_of_Cats/Pictures_of_Cats/Assets/unknown.png)
+![Example of App Navigation](Pictures_of_Cats/Pictures_of_Cats/Assets/unknown.png)
 
 ## Author
 Andrew Peña andrewdpena@gmail.com
