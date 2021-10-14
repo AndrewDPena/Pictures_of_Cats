@@ -11,9 +11,15 @@ namespace Pictures_of_Cats
         public App()
         {
             InitializeComponent();
+            
+            NavigationService.Configure("LoginPage", typeof(LoginPage));
+            NavigationService.Configure("GalleryPage", typeof(GalleryPage));
+            //NavigationService.Configure("DetailPage", typeof(DetailPage));
+            var mainPage = ((ViewNavigationService) NavigationService).SetRootPage("LoginPage");
 
-            MainPage = new LoginPage();
+            MainPage = mainPage;
         }
+        public static INavigationService NavigationService { get; } = new ViewNavigationService();
 
         protected override void OnStart()
         {

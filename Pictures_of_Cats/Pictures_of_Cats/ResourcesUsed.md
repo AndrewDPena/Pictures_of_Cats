@@ -20,3 +20,6 @@ https://stackoverflow.com/questions/68434173/setting-an-image-for-an-imagecell-i
 ## Basic Login Page
 https://www.c-sharpcorner.com/article/xamarin-forms-create-a-login-page-mvvm/
 https://siddheshshelke.wordpress.com/2020/03/26/creating-login-page-using-mvvm-pattern-in-xamarin/
+
+## Creating NavigationService and Page Navigation
+https://mallibone.com/post/a-simple-navigation-service-for-xamarinforms

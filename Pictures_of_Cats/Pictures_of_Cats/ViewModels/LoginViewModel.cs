@@ -25,7 +25,7 @@ namespace Pictures_of_Cats.ViewModels
         {  
             SubmitCommand = new Command(OnSubmit);  
         }  
-        private void OnSubmit()  
+        private async void OnSubmit()  
         {  
             if (_email != "andrewdpena@gmail.com" || _password != "MalPaws")  
             {  
@@ -33,7 +33,8 @@ namespace Pictures_of_Cats.ViewModels
             }
             else
             {
-                Application.Current.MainPage = new GalleryPage();
+                await App.NavigationService.NavigateAsync("GalleryPage");
+                //Application.Current.MainPage = new GalleryPage();
             }
         } 
     }
