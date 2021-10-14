@@ -5,30 +5,20 @@ using Xamarin.Forms;
 
 namespace Pictures_of_Cats.ViewModels
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    public class LoginViewModel : ViewModelBase
     {
         public Action DisplayInvalidLoginPrompt;
-        public Action DisplaySuccessfulLogin;
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };  
         private string _email;  
         public string Email
         {  
             get => _email;
-            set  
-            {  
-                _email = value;  
-                PropertyChanged(this, new PropertyChangedEventArgs("Email"));  
-            }  
+            set => SetProperty(ref _email, value);
         }  
         private string _password;    
         public string Password
         {  
             get => _password;
-            set  
-            {  
-                _password= value;  
-                PropertyChanged(this, new PropertyChangedEventArgs("Password"));  
-            }  
+            set => SetProperty(ref _password, value);
         }  
         public ICommand SubmitCommand { protected set; get; }  
         public LoginViewModel()  
@@ -44,7 +34,6 @@ namespace Pictures_of_Cats.ViewModels
             else
             {
                 Application.Current.MainPage = new GalleryPage();
-                //DisplaySuccessfulLogin();
             }
         } 
     }

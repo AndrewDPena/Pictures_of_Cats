@@ -17,7 +17,6 @@ namespace Pictures_of_Cats
             var vm = new LoginViewModel();  
             this.BindingContext = vm;  
             vm.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");  
-            vm.DisplaySuccessfulLogin += () => DisplayAlert("Success", "Good Login", "Ok");
             InitializeComponent();  
   
             Email.Completed += (object sender, EventArgs e) =>  

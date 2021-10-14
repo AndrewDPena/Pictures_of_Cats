@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Pictures_of_Cats.ViewModels
 {
-    public class GalleryViewModel
+    public class GalleryViewModel : ViewModelBase
     {
         private const string CatDirectory = "Pictures_of_Cats.CatPics.";
         private readonly List<CatModel> _catList;
